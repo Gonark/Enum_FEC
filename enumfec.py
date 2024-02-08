@@ -135,10 +135,10 @@ def main():
 			except KeyboardInterrupt:
 				print(f"\n=====================================================\n{dicionario_color['vermelho']}Saindo... {dicionario_color['reset']}")
 	elif op == 3:
-		print('Coloque os argumentos corretamente.')
+		print('Coloque os argumentos corretamente. Dê "-h" para verificar os argumentos disponiveis')
 	
 	elif op == 4:
-		if sys.argv[2] in ['-W', '-w', '--wordlist']:
+		if sys.argv[1] in ['-W', '-w', '--wordlist']:
 			site = sys.argv[2]
 			wordlist = sys.argv[3]
 			try:
@@ -148,6 +148,8 @@ def main():
 					brute_select(site, wordlist)
 			except KeyboardInterrupt:
 				print(f"\n=====================================================\n{dicionario_color['vermelho']}Saindo... {dicionario_color['reset']}")
+		else:
+			print('Coloque os argumentos corretamente. Dê "-h" para verificar os argumentos disponiveis')
 if __name__ == "__main__":
 	main()
 
