@@ -103,7 +103,7 @@ def main():
 		print('Coloque os argumentos corretamente.')
 	
 	elif op == 4:
-		if sys.argv[2] in ['-W', '-w', '--wordlist']
+		if sys.argv[2] in ['-W', '-w', '--wordlist']:
 			site = sys.argv[2]
 			wordlist = sys.argv[3]
 			try:
