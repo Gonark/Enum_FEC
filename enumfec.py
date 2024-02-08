@@ -94,7 +94,7 @@ def main():
 			resp = onion_verif(url)
 			if resp == 200:
 				brute(url)
-			else
+			else:
 				exit()
 		except KeyboardInterrupt:
 			print('\nSaindo...')
