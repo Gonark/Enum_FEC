@@ -31,7 +31,7 @@ def brute(site):
 		print('Erro:', e)
 def brute_select(site, wordlist):
 	try:
-		with open('wordlist', 'r', encoding='ISO-8859-1') as file:
+		with open(wordlist, 'r', encoding='ISO-8859-1') as file:
 			lines = file.readlines()
 			clean_lines = [line.strip() for line in lines if "#" not in line]
 			for linha in clean_lines:
@@ -50,8 +50,8 @@ def onion_verif(site):
 	session = requests.session()
 	session.proxys = {}
 	
-	session.proxys['http'] = 'sockets5h://localhost:9050'
-	session.proxys['https'] = 'sockets5h://localhost:9050'
+	session.proxys['http'] = 'sockts5h://localhost:9050'
+	session.proxys['https'] = 'sockts5h://localhost:9050'
 	
 	user_agent = {"user_agent": "Windows 11 pro"}
 	
@@ -73,8 +73,8 @@ def brute_onion(word, word_mod, site):
 		session = requests.session()
 		session.proxys = {}
 		
-		session.proxys['http'] = 'sockets5h://localhost:9050'
-		session.proxys['https'] = 'sockets5h://localhost:9050'
+		session.proxys['http'] = 'sockts5h://localhost:9050'
+		session.proxys['https'] = 'sockts5h://localhost:9050'
 		
 		user_agent = {"user_agent": "Windows 11 pro"}
 		
@@ -143,7 +143,7 @@ def main():
 			wordlist = sys.argv[3]
 			try:
 				aprenset()
-				resp = onion_verif(url)
+				resp = onion_verif(site)
 				if resp == 200:
 					brute_select(site, wordlist)
 			except KeyboardInterrupt:
@@ -152,5 +152,3 @@ def main():
 			print('Coloque os argumentos corretamente. Dê "-h" para verificar os argumentos disponiveis')
 if __name__ == "__main__":
 	main()
-
-
