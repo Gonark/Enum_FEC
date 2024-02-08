@@ -89,7 +89,6 @@ def main():
 	
 	elif op == 2:
 		url = sys.argv[1]
-		domin = organizacao(url)
 		try:
 			resp = onion_verif(url)
 			if resp == 200:
